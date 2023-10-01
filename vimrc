@@ -1,7 +1,6 @@
 """ 基本配置
 " 不与 Vi 兼容（采用 Vim 自己的操作命令）
 set nocompatible
-
 " 打开语法高亮。自动识别代码，使用多种颜色显示
 syntax on
 
@@ -54,3 +53,5 @@ set list
 set wildmenu
 set wildmode=longest:list,full
 
+" 设置缩进
+set tabstop=4
