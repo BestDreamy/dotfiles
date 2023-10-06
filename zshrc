@@ -100,6 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll="ls -al"
 
+alias gs="git status"
+alias gc="git commit"
+alias gi="git init"
+
 plugins=(
     git 
 )

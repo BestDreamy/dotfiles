@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = main
+[user]
+	email = baichuan@shanghaitech.com
+	name = baichuan
+[http]
+	sslVerify = false
+[alias]
+    graph = log --all --graph --decorate --oneline
