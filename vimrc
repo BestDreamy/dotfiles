@@ -55,3 +55,43 @@ set wildmode=longest:list,full
 
 " 设置缩进
 set tabstop=4
+
+"-----------------------------------------------------------------------------
+" Add File Header
+"-----------------------------------------------------------------------------
+autocmd BufNewFile *.v,*.sv,*.cpp,*.c,*.h exec ":call AddHeader()"
+autocmd BufWrite *.v,*.c call UpdateLastModifyTime()
+
+function s:GetUserName()
+    let user_name = "aric"
+    return user_name
+endfunction
+
+function AddHeader()
+	let line = getline(1)
+  	let filename = expand("%")
+	call append(0,  "// +FHDR----------------------------------------------------------------------------")
+	call append(1,  "//                 Copyright (c) ".strftime("%Y ") )
+	call append(2,  "//                 ALL RIGHTS aric's RISC-V")
+	call append(3,  "// ---------------------------------------------------------------------------------")
+	call append(4,  "// Filename      : ".filename)
+	call append(5,  "// Author        : ".s:GetUserName())
+	call append(6,  "// Created On    : ".strftime("%Y-%m-%d %H:%M"))
+	call append(7,  "// Last Modified : ")
+	call append(8,  "// ---------------------------------------------------------------------------------")
+	call append(9,  "// Description   : ")
+	call append(10, "//")
+	call append(11, "//")
+	call append(12, "// -FHDR----------------------------------------------------------------------------")
+endfunction
+
+
+"-----------------------------------------------------------------------------
+" ModifyTime
+"-----------------------------------------------------------------------------
+function UpdateLastModifyTime()
+	let line = getline(8)
+	if line =~ '// Last Modified'
+		call setline(8,"// Last Modified : " . strftime("%Y-%m-%d %H:%M"))
+	endif
+endfunction
