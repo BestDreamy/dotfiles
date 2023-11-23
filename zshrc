@@ -107,6 +107,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias cp="cp -r"
+alias ll="ls -al"
 
 # Show current timestamp 
 # RPROMPT="[%* %D{%m/%d}]"
