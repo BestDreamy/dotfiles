@@ -15,6 +15,8 @@ set mouse=a
 
 " 使用 utf-8 编码
 set encoding=utf-8
+set fileencodings=utf-8,gb2312,gbk,gb18030
+set termencoding=utf-8
 
 " 启用256色
 set t_Co=256
@@ -45,8 +47,8 @@ set laststatus=2
 set history=1000
 
 " 如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块
-set listchars=tab:»■,trail:■
-set list
+" set listchars=tab:»■,trail:■
+" set list
 
 " 命令模式下，底部操作指令按下 Tab 键自动补全。
 " 第一次按下 Tab，会显示所有匹配的操作指令的清单；第二次按下 Tab，会依次选择各个指令
@@ -55,6 +57,10 @@ set wildmode=longest:list,full
 
 " 设置缩进
 set tabstop=4
+set softtabstop=4
+
+" 格式化缩进 
+set shiftwidth=4
 
 "-----------------------------------------------------------------------------
 " vundle
@@ -68,6 +74,7 @@ call vundle#begin()
 " 让vundle管理插件版本,必须
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
+Plugin 'w0rp/ale'
 " Plugin 'git://github.com/w0rp/ale.git'
 " Plugin 'git://github.com/bling/vim-airline'
 " Plugin 'git://github.com/SirVer/ultisnips'
