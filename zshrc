@@ -107,11 +107,31 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cp="cp -r"
 alias ll="ls -al"
+alias rm="rm -rf"
+
+function cpd() { 
+	# echo "$#"
+	cp -r "$1" "$2"
+   	cd "$2"
+}
+alias cp="cp -r"
+
+function mkcd() { 
+	mkdir "$1"
+	cd "$1"
+}
+
+alias ga="git add $1"
+alias gc="git commit -m"
+alias gs="git status"
+alias v="vim"
+alias s="source"
 
 # Show current timestamp 
 # RPROMPT="[%* %D{%m/%d}]"
 
 # Uncomment the following line to automatically update without prompting.
 DISABLE_UPDATE_PROMPT="true"
+
+YSYX=/home/baichuan/ysyx/ysyx-workbench/pa0/LearnCTheHardWay/
