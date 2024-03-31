@@ -88,7 +88,7 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -ail'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -115,3 +115,49 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# add hdl_checker to $PATH
+# export PATH="$PATH:/home/bcoi/.local/bin"
+
+# system [alias]
+alias hist='history'
+alias mkdir='mkdir -p '
+alias cd..='cd ..'
+alias tree.="tree ."
+alias py="python3"
+
+# sudo apt install xclip
+set completion-ignore-case on
+set show-all-if-ambiguous on
+
+# git [alias]
+alias gs='git status ' 
+alias ga='git add ' 
+alias gb='git branch ' 
+alias gc='git commit' 
+alias gd='git diff' 
+alias go='git checkout ' 
+alias gk='gitk --all&' 
+alias gx='gitx --all'
+alias gti='git '
+alias got='git '
+alias gtag='git tag'
+alias glog='git log --oneline '
+alias gls='git ls-files '
+alias grm='git rm --cached '
+alias gitignore='git status --ignored '
+alias gittracked='git ls-tree --name-only HEAD' 
+
+# cmake [alias]
+alias bmake='cmake -B '
+
+# nvim
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
+# ysyx
+export NPC_HOME=/home/bcoi/ysyx/npc
+export VERLATOR_ROOT=/home/bcoi/tool/verilator/
+export NVBOARD_HOME=/home/bcoi/ysyx/nvboard
+
+export NEMU_HOME=/home/bcoi/ysyx/nemu
+export AM_HOME=/home/bcoi/ysyx/abstract-machine
